@@ -1,0 +1,2 @@
+### Consulta de clientes
+GET http://api.sistemasexto/clientes

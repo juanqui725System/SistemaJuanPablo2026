@@ -1,0 +1,41 @@
+{
+  "devDependencies": {
+    "@iconify/tailwind4": "^1.2.3"
+  },
+  "name": "backendsexto2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "boolbase": "^1.0.0",
+    "commander": "^11.1.0",
+    "css-select": "^5.2.2",
+    "css-tree": "^3.2.1",
+    "css-what": "^6.2.2",
+    "csso": "^5.0.5",
+    "dom-serializer": "^2.0.0",
+    "domelementtype": "^2.3.0",
+    "domhandler": "^5.0.3",
+    "domutils": "^3.2.2",
+    "entities": "^4.5.0",
+    "fflate": "^0.8.3",
+    "import-meta-resolve": "^4.2.0",
+    "mdn-data": "^2.27.1",
+    "modern-tar": "^0.7.7",
+    "nth-check": "^2.1.1",
+    "package-manager-detector": "^1.8.0",
+    "pathe": "^2.0.3",
+    "picocolors": "^1.1.1",
+    "sax": "^1.6.1",
+    "source-map-js": "^1.2.1",
+    "svgo": "^4.0.2",
+    "tailwindcss": "^4.3.3",
+    "tinyexec": "^1.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

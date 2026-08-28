@@ -1,0 +1,30 @@
+### Consulta de productos
+GET http://api.sistemasexto/productos
+
+### Modificar Productos
+PUT http://api.sistemasexto/productos/1
+Content-Type: application/json
+
+{
+    "codBarras":"750105521001",
+    "descripcion":"Arroz Integral 3kg",
+    "stock":85,
+    "precio_unitario":15,
+    "creado_por":2,
+    "fecha_registro":"2026-06-12"
+}
+### Adicionar Producto
+POST http://api.sistemasexto/productos
+Content-Type: application/json
+
+{
+    "codBarras":"750105531022",
+    "descripcion":"prueba nuevo producto 3kg",
+    "stock":85,
+    "precio_unitario":15,
+    "creado_por":2,
+    "fecha_registro":"2026-06-12"
+}
+
+### Eliminar Producto
+DELETE http://api.sistemasexto/productos/22
