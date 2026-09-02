@@ -4,15 +4,13 @@
 ### Juan Carlos
 ## Registro de usuario
  - Registro de personal
- ```git add
-    git add . 
--
-- Para adicionar archivos nuevos y modificados
-``` git commit
-    git commit -m "Comentario diferente"
--
-- Para grabar en el git local
-```git push
-   git push
--
-- Para subir a git en la nube
+## Resumen práctico
+git add . → prepara archivos.
+
+git commit -m "mensaje" → guarda cambios en tu historial local.
+
+git push → sube esos cambios a la nube.
+### Consejo: si es la primera vez que subes tu proyecto, asegúrate de haber hecho antes:
+git remote add origin https://github.com/usuario/repositorio.git
+git branch -M main
+git push -u origin main
