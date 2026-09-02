@@ -1,7 +1,7 @@
 # Sistema dearrollado en clase
 ## SistemaJuanPablo2026 en git
 ### Desarrolado por
-### Juan Carlos
+### Juan Carlos 2026
 ## Registro de usuario
  - Registro de personal
 ## Resumen práctico
