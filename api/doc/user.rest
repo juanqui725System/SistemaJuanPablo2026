@@ -1,2 +1,30 @@
-### Consulta de usuario
+### Listar usuarios
 GET http://api.sistemasexto/users
+
+### Obtener usuario por ID
+GET http://api.sistemasexto/users/1
+
+### Crear usuario
+POST http://api.sistemasexto/users
+Content-Type: application/json
+
+{
+    "username": "Carlos",
+    "email": "carlos@gmail.com",
+    "password_hash": "carlos123",
+    "cod_empleado": 3
+}
+
+### Actualizar usuario
+PUT http://api.sistemasexto/users/1
+Content-Type: application/json
+
+{
+    "username": "Roberto",
+    "email": "roberto@gmail.com",
+    "password_hash": "robert123",
+    "cod_empleado": 1
+}
+
+### Eliminar usuario
+DELETE http://api.sistemasexto/users/1

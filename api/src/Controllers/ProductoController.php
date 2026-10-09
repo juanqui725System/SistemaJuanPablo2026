@@ -7,6 +7,16 @@ class ProductoController
         $producto = Productos::all();
         echo json_encode($producto);
     }
+    public function getById($id)
+    {
+        $producto = Productos::find($id);
+        if ($producto === null) {
+            http_response_code(404);
+            echo json_encode(["estado" => false, "message" => "Producto no encontrado"]);
+            return;
+        }
+        echo json_encode($producto);
+    }
     //Actualizar Producto
     public function actualizar($id)
     {

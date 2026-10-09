@@ -1,0 +1,28 @@
+### Listar empleados
+GET http://api.sistemasexto/empleados
+
+### Obtener empleado por ID
+GET http://api.sistemasexto/empleados/1
+
+### Crear empleado
+POST http://api.sistemasexto/empleados
+Content-Type: application/json
+
+{
+    "ci": "12345678",
+    "nombre": "Juan",
+    "apellidos": "Perez"
+}
+
+### Actualizar empleado
+PUT http://api.sistemasexto/empleados/1
+Content-Type: application/json
+
+{
+    "ci": "12345678",
+    "nombre": "Juan Carlos",
+    "apellidos": "Perez Gomez"
+}
+
+### Eliminar empleado
+DELETE http://api.sistemasexto/empleados/1

@@ -1,2 +1,32 @@
 ### Consulta de clientes
 GET http://api.sistemasexto/clientes
+
+### Consulta de cliente por ID
+GET http://api.sistemasexto/clientes/1
+
+### Adicionar cliente
+POST http://api.sistemasexto/clientes
+Content-Type: application/json
+
+{
+    "ci": "12345678",
+    "nombre": "Ana",
+    "apellidos": "Lopez",
+    "direccion": "Calle Principal 123",
+    "telefono": "70000000"
+}
+
+### Modificar cliente
+PUT http://api.sistemasexto/clientes/1
+Content-Type: application/json
+
+{
+    "ci": "12345678",
+    "nombre": "Ana Maria",
+    "apellidos": "Lopez",
+    "direccion": "Calle Principal 456",
+    "telefono": "70000000"
+}
+
+### Eliminar cliente
+DELETE http://api.sistemasexto/clientes/1

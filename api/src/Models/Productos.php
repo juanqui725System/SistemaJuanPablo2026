@@ -8,6 +8,14 @@ class Productos
         $sql = "SELECT * FROM PRODUCTOS";
         return ConexionPDO::query($sql);
     }
+    public static function find($id)
+    {
+        $productos = ConexionPDO::query(
+            "SELECT * FROM PRODUCTOS WHERE id = :id",
+            [":id" => $id]
+        );
+        return $productos[0] ?? null;
+    }
     //Actualizar Producto
     public static function update($id, $data)
     {

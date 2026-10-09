@@ -1,5 +1,4 @@
 import { getUserList } from './components/UserList.js';
-
 const app = document.getElementById('app');
 const pageTitle = document.getElementById('pageTitle');
 const navLinks = document.querySelectorAll('[data-view]');
@@ -33,8 +32,8 @@ const views = {
         app.innerHTML = await res.text();
         pageTitle.textContent = titles.users;
         setActiveLink('users');
-        const res=await getUserList();
-        console.log("Resultado",res);
+        const res1=await getUserList();
+        console.log("Resultado",res1);
     },
     products: async () => {
         const res = await fetch('./src/views/products.html');
