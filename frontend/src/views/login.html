@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <title>Iniciar sesión | Sexto 2026</title>
+    <base href="http://sexto.com/">
+    <link href="./src/styles/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-950 font-sans text-slate-900 antialiased">
+    <main class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-10 sm:px-6">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+            <div class="absolute -left-32 -top-40 h-96 w-96 rounded-full bg-indigo-600/20 blur-3xl"></div>
+            <div class="absolute -bottom-48 -right-24 h-[32rem] w-[32rem] rounded-full bg-cyan-500/10 blur-3xl"></div>
+            <div class="absolute inset-0 opacity-[0.12] [background-image:radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        </div>
+
+        <section class="relative grid w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl shadow-black/30 lg:grid-cols-[1.05fr_0.95fr]" aria-label="Acceso al sistema">
+            <div class="relative hidden flex-col justify-between overflow-hidden bg-gradient-to-br from-indigo-700 via-indigo-800 to-slate-900 p-12 text-white lg:flex">
+                <div aria-hidden="true" class="absolute -right-24 top-24 h-72 w-72 rounded-full border border-white/10"></div>
+                <div aria-hidden="true" class="absolute -right-12 top-36 h-48 w-48 rounded-full border border-white/10"></div>
+                <div class="relative flex items-center gap-3">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/20">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7h8M8 11h6" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold tracking-wide">Sexto 2026</p>
+                        <p class="text-xs text-indigo-200">Sistema de ventas</p>
+                    </div>
+                </div>
+
+                <div class="relative max-w-sm">
+                    <span class="mb-5 block h-1 w-12 rounded-full bg-cyan-300"></span>
+                    <h1 class="text-4xl font-semibold leading-tight tracking-tight">Todo tu negocio,<br>en un solo lugar.</h1>
+                    <p class="mt-5 text-base leading-7 text-indigo-100/80">Administra tus productos, usuarios y operaciones de forma sencilla y segura.</p>
+                </div>
+
+                <p class="relative text-xs text-indigo-200/70">Acceso exclusivo para usuarios autorizados</p>
+            </div>
+
+            <div class="flex items-center px-6 py-12 sm:px-12 lg:px-14">
+                <div class="mx-auto w-full max-w-md">
+                    <div class="mb-9 lg:hidden">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/25">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <p class="mt-3 text-sm font-semibold text-slate-700">Sexto 2026 <span class="font-normal text-slate-400">· Sistema de ventas</span></p>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-600">Bienvenido</p>
+                        <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900">Inicia sesión</h2>
+                        <p class="mt-2 text-sm text-slate-500">Ingresa tus datos para continuar al sistema.</p>
+                    </div>
+
+                    <form id="loginForm" class="space-y-5" novalidate>
+                        <div>
+                            <label for="username" class="mb-2 block text-sm font-medium text-slate-700">Usuario o correo electrónico</label>
+                            <div class="relative">
+                                <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+                                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke-width="1.7"/><path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke-width="1.7" stroke-linecap="round"/></svg>
+                                </span>
+                                <input id="username" name="username" type="text" autocomplete="username" required placeholder="Tu usuario o correo" class="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/10">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="mb-2 flex items-center justify-between gap-3">
+                                <label for="password" class="block text-sm font-medium text-slate-700">Contraseña</label>
+                                <a href="mailto:soporte@sexto.com?subject=Recuperar%20contrase%C3%B1a" class="text-xs font-medium text-indigo-600 transition hover:text-indigo-800">¿Olvidaste tu contraseña?</a>
+                            </div>
+                            <div class="relative">
+                                <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+                                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2" stroke-width="1.7"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke-width="1.7" stroke-linecap="round"/><path d="M12 14v3" stroke-width="1.7" stroke-linecap="round"/></svg>
+                                </span>
+                                <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Ingresa tu contraseña" class="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-11 pr-12 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-500/10">
+                                <button id="togglePassword" type="button" class="absolute inset-y-0 right-0 flex items-center px-3.5 text-slate-400 transition hover:text-slate-700" aria-label="Mostrar contraseña" aria-pressed="false">
+                                    <svg id="eyeIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" stroke-width="1.7"/><circle cx="12" cy="12" r="3" stroke-width="1.7"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <label class="flex cursor-pointer items-center gap-2.5 text-sm text-slate-600">
+                            <input id="remember" name="remember" type="checkbox" class="h-4 w-4 rounded border-slate-300 accent-indigo-600 focus:ring-indigo-500">
+                            Recordar mi usuario
+                        </label>
+
+                        <button type="submit" class="group flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500/25">
+                            Ingresar al sistema
+                            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <p id="formMessage" class="hidden rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-800" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <div class="mt-8 border-t border-slate-100 pt-5 text-center">
+                        <p class="text-xs text-slate-400">&copy; 2026 Sexto · Sistema de ventas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./src/components/Login.js" type="module"></script>
+</body>
+</html>

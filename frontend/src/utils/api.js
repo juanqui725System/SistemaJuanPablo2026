@@ -1,4 +1,4 @@
-const API_URL = 'http://api.sistemasexto/';
+const API_URL = 'http://api.sexto.com/';
 
 export const api={
     //funcion para obtener data de la api
@@ -13,6 +13,22 @@ export const api={
             console.error('Error al obtener data:', error);
             throw error;
           }
+    },
+
+    post: async (endpoint, data) => {
+        const response = await fetch(`${API_URL}${endpoint}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) {
+            const validationErrors = result.errores
+                ? Object.values(result.errores).join(' ')
+                : '';
+            throw new Error(validationErrors || result.message || `Error al guardar (${response.status})`);
+        }
+        return result;
     },
 
     del: async (endpoint) => {

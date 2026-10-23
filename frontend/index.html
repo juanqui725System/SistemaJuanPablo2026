@@ -12,7 +12,8 @@
 
 <body class="bg-gray-50">
     <div class="flex h-screen">
-        <aside class="bg-slate-800 text-white w-64 flex flex-col">
+        <button id="menuBackdrop" type="button" class="fixed inset-0 z-30 hidden bg-slate-900/50 lg:hidden" aria-label="Cerrar menú"></button>
+        <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 flex w-64 -translate-x-full flex-col bg-slate-800 text-white transition-transform duration-300 ease-in-out lg:static lg:z-auto lg:translate-x-0 lg:transform-none">
             <div class="p-5 border-b border-slate-700">
                 <h1 class="text-lg font-bold text-white">Sexto 2026</h1>
                 <p class="text-sm text-slate-400 mt-1">Sistema de Ventas</p>
@@ -41,8 +42,23 @@
         </aside>
         <div class="flex-1 flex flex-col overflow-hidden">
             <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
-                <h1 id="pageTitle" class="text-xl font-bold text-gray-800">Inicio</h1>
-                <span class="text-sm text-gray-400">Sexto 2026</span>
+                <div class="flex items-center gap-3">
+                    <button id="menuToggle" type="button" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 lg:hidden" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <h1 id="pageTitle" class="text-xl font-bold text-gray-800">Inicio</h1>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span id="currentUsername" class="hidden max-w-40 truncate text-sm font-medium text-slate-600 sm:inline"></span>
+                    <a id="sessionAction" href="./src/views/login.html" class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500/25" aria-label="Iniciar sesión">
+                        <svg id="sessionActionIcon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5m5 5H3" />
+                        </svg>
+                        <span id="sessionActionText">Iniciar sesión</span>
+                    </a>
+                </div>
             </header>
             <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
                 <div id="app"></div>

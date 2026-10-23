@@ -15,6 +15,15 @@ Content-Type: application/json
     "cod_empleado": 3
 }
 
+### Login usuario
+POST http://api.sexto.com/login
+Content-Type: application/json
+
+{
+    "email": "juanqui725@gmail.com",
+    "password": "1234567"
+}
+
 ### Actualizar usuario
 PUT http://api.sistemasexto/users/1
 Content-Type: application/json

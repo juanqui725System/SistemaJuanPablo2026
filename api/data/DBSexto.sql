@@ -28,6 +28,7 @@ id int not null PRIMARY KEY auto_increment,
 username varchar(50) not null UNIQUE,
 password_hash varchar(255) not null,
 estado boolean default true,
+rol varchar(20) not null default 'vendedor',
 cod_empleado int not null,
 FOREIGN KEY(cod_empleado) REFERENCES EMPLEADOS(id)
 )ENGINE=InnoDB;

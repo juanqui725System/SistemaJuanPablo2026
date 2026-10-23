@@ -16,6 +16,15 @@ class Users
         return $users[0] ?? null;
     }
 
+    public static function findByUsernameOrEmail($credential)
+    {
+        $users = ConexionPDO::query(
+            "SELECT id, username,rol, email, password_hash, estado FROM USUARIOS WHERE username = :username OR email = :email LIMIT 1",
+            [":username" => $credential, ":email" => $credential]
+        );
+        return $users[0] ?? null;
+    }
+
     public static function add($data)
     {
         $columnas = [];

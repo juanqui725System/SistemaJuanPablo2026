@@ -21,6 +21,7 @@ $route->add('GET','/','UserController@getAll');
 $route->add('GET','/users','UserController@getAll'); 
 $route->add('GET','/users/{id}','UserController@getById'); 
 $route->add('POST','/users','UserController@add'); 
+$route->add('POST','/login','UserController@login'); 
 $route->add('PUT','/users/{id}','UserController@actualizar'); 
 $route->add('DELETE','/users/{id}','UserController@eliminar'); 
 //direccion de productos
