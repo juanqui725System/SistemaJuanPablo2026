@@ -1,5 +1,7 @@
 // const API_URL = 'http://api.sexto.com/';
+//export const BASE_URL = 'http://api.sexto.com/';
 const API_URL = 'https://sistemajuanpablo2026.onrender.com/';
+export const BASE_URL = 'https://sistemajuanpablo2026-1.onrender.com';
 export const api={
     //funcion para obtener data de la api
     get: async (endpoint) => {

@@ -1,4 +1,4 @@
-import { api } from "../utils/api.js";
+import { api, BASE_URL } from "../utils/api.js";
 
 const form = document.getElementById("loginForm");
 const usernameInput = document.getElementById("username");
@@ -53,9 +53,9 @@ form.addEventListener("submit", async (event) => {
     const role = String(result.usuario?.rol || "").trim().toLowerCase();
     const destination =
       role === "administrador"
-        ? "./index.html"
+        ? `${BASE_URL}/index.html`
         : role === "vendedor"
-          ? "./indexVendedor.html"
+          ? `${BASE_URL}/indexVendedor.html`
           : null;
     if (!destination) {
       throw new Error("El usuario no tiene un rol válido asignado.");
